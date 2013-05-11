@@ -11,8 +11,9 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js" type="text/javascript">
 </script>
 <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-	</head>
+<script type="text/javascript" src = "jquery.svg.package-1.4.5 2/jquery.svg.min.js"></script>
 	<script type="text/javascript" src = "script.js"></script>
+	</head>
 	<body>
 		<div id = "game">
 			<svg version="1.1"
@@ -28,7 +29,22 @@
              attributeName="opacity"
              from="1" to="0.5" dur="1s" 
              begin="animation1.end" /></text>
-             <text x="300" y = "350" font-size="45" text-anchor = "middle" fill="white">Made by <a href = "">jlints</a> and <a href = "">nicohman</a>
+             <text x="300" y = "350" font-size="25" text-anchor = "middle" fill="white">Made by <a href = "https://github.com/jlints">jlints</a> and <a href = "https://github.com/nicohman">nicohman</a>    <animate id="animation12"
+             attributeName="opacity"
+             from="0.5" to="1" dur="1s"
+             begin="0s;animation22.end" />
+    <animate id="animation22"
+             attributeName="opacity"
+             from="1" to="0.5" dur="1s" 
+             begin="animation12.end" /></text>
+                          <text x="300" y = "370" font-size="15" text-anchor = "middle" fill="white">Hit space to begin.<animate id="animation123"
+             attributeName="opacity"
+             from="0.5" to="1" dur="1s"
+             begin="0s;animation223.end" />
+    <animate id="animation223"
+             attributeName="opacity"
+             from="1" to="0.5" dur="1s" 
+             begin="animation123.end" /></text>
 			</svg>
 		</div>
 	</body>

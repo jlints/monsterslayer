@@ -13,16 +13,17 @@
 </script>
 <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 <script type="text/javascript" src = "jquery.svg.package-1.4.5 2/jquery.svg.min.js"></script>
+<script type="text/javascript" src = "raphael-min.js"></script>
 	<script type="text/javascript" src = "script.js"></script>
 	</head>
 	<body>
-		<div id = "game" class = "1">
+		<div id = "game" class = "1 game">
 			<svg version="1.1"
 			     baseProfile="full"
 			     width="600" height="600"
 			     xmlns="http://www.w3.org/2000/svg">
 			     <rect width = "100%" height = "100%" fill = "black" />
-			     	<text id="name" x="300" y="300" font-size="60" text-anchor="middle" fill="white">MonsterSlayer    <animate id="animation1"
+			     	<text id="name" x="300" y="300" font-size="60" text-anchor="middle" fill="white" font-family="LeagueGothic">MonsterSlayer    <animate id="animation1"
              attributeName="opacity"
              from="0.5" to="1" dur="1s"
              begin="0s;animation2.end" />
@@ -30,7 +31,7 @@
              attributeName="opacity"
              from="1" to="0.5" dur="1s" 
              begin="animation1.end" /></text>
-             <text x="300" y = "350" font-size="25" text-anchor = "middle" fill="white">Made by <a href = "https://github.com/jlints">jlints</a> and <a href = "https://github.com/nicohman">nicohman</a>    <animate id="animation12"
+             <text x="300" y = "350" font-size="25" text-anchor = "middle" fill="white" font-family: "Acknowledgement">Made by <a href = "https://github.com/jlints">jlints</a> and <a href = "https://github.com/nicohman">nicohman</a>    <animate id="animation12"
              attributeName="opacity"
              from="0.5" to="1" dur="1s"
              begin="0s;animation22.end" />
@@ -38,7 +39,7 @@
              attributeName="opacity"
              from="1" to="0.5" dur="1s" 
              begin="animation12.end" /></text>
-                          <text x="300" y = "370" font-size="15" text-anchor = "middle" fill="white">Hit space to begin.<animate id="animation123"
+                          <text x="300" y = "370" font-size="15" text-anchor = "middle" fill="white">Hit any key to begin.<animate id="animation123"
              attributeName="opacity"
              from="0.5" to="1" dur="1s"
              begin="0s;animation223.end" />
@@ -48,6 +49,7 @@
              begin="animation123.end" /></text>
 			</svg>
 		</div>
-		<div id = "2" style = "display:none">hello</div>
+		<div id = "2" style = "display:none" class = "game">
+		</div>
 	</body>
 </html>

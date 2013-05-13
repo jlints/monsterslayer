@@ -2,20 +2,54 @@
 (function() {
   $(document).ready(function() {
     return $(document).keydown(function(e) {
-      var goblin, goblinDie, paper, person;
+      var goblin, paper, person;
 
       $(document).unbind();
       $(".1").remove();
       $("#2").fadeIn('fast');
       paper = Raphael(document.getElementById("2"), 600, 600);
-      goblin = paper.image("goblin.png", 280, 280, 300, 300);
       person = paper.image("person.png", 150, 300, 400, 300);
-      goblinDie = Raphael.animation({
-        height: 0,
-        width: 0
-      });
-      return $(document).click(function() {
-        return goblin.animate(goblinDie);
+      goblin = paper.image("goblin.png", 250, 180, 300, 300);
+      return goblin.click(function() {
+        var goblinDie, t;
+
+        goblinDie = Raphael.animation({
+          height: 0,
+          width: 0
+        });
+        goblin.animate(goblinDie);
+        t = paper.text(300, 300, "On to the next Level!");
+        t.attr("font-family", "LeagueGothic");
+        t.attr("font-size", "50pt");
+        t.attr("color", "green");
+        return setTimeout(function() {
+          var goblin2;
+
+          $("#2").remove();
+          $("#3").fadeIn('fast');
+          paper = Raphael(document.getElementById("3"), 600, 600);
+          person = paper.image("person.png", 150, 300, 400, 300);
+          goblin = paper.image("goblin2.png", 250, 180, 300, 300);
+          goblin2 = paper.image("goblin.png", 300, 180, 300, 300);
+          goblin2.click(function() {
+            goblinDie = Raphael.animation({
+              height: 0,
+              width: 0
+            });
+            return goblin2.animate(goblinDie);
+          });
+          return goblin.click(function() {
+            goblinDie = Raphael.animation({
+              height: 0,
+              width: 0
+            });
+            goblin.animate(goblinDie);
+            t = paper.text(300, 300, "On to the next Level!");
+            t.attr("font-family", "LeagueGothic");
+            t.attr("font-size", "50pt");
+            return t.attr("color", "green");
+          });
+        }, 5000);
       });
     });
   });
